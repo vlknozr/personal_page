@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Volkan Özer</title>
+    <meta name="description" content="Personal page of Volkan Özer. Coming soon." />
+    <link rel="canonical" href="https://volkanozer.github.io/" />
+    <meta property="og:title" content="Volkan Özer" />
+    <meta property="og:description" content="Personal page. Coming soon." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://volkanozer.github.io/" />
+    <meta name="theme-color" content="#f3efe6" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#12110f" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&amp;family=Outfit:wght@400;500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --paper: #f3efe6;
+        --ink: #171614;
+        --muted: #6d675e;
+        --line: #d8d1c4;
+        --mark: #8f3d2b;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --paper: #12110f;
+          --ink: #f3efe6;
+          --muted: #a39b90;
+          --line: #2c2924;
+          --mark: #e07a62;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+      }
+
+      body {
+        min-height: 100dvh;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Outfit, "Avenir Next", "Segoe UI", sans-serif;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        padding: clamp(1.5rem, 4vw, 3.25rem);
+      }
+
+      header,
+      footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 1rem;
+        font-size: 0.78rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      header {
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 1rem;
+      }
+
+      footer {
+        border-top: 1px solid var(--line);
+        padding-top: 1rem;
+      }
+
+      main {
+        display: grid;
+        align-content: end;
+        padding: clamp(2.5rem, 8vh, 6rem) 0 clamp(2rem, 6vh, 4rem);
+      }
+
+      h1 {
+        margin: 0;
+        max-width: 12ch;
+        font-family: Newsreader, "Iowan Old Style", Palatino, Georgia, serif;
+        font-weight: 500;
+        font-optical-sizing: auto;
+        font-size: clamp(3.15rem, 12vw, 9.5rem);
+        line-height: 0.92;
+        letter-spacing: -0.035em;
+      }
+
+      .status {
+        margin: 1.5rem 0 0;
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        font-size: 0.95rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .status::before {
+        content: "";
+        width: 0.45rem;
+        height: 0.45rem;
+        border-radius: 50%;
+        background: var(--mark);
+      }
+
+      ::selection {
+        background: var(--ink);
+        color: var(--paper);
+      }
+
+      @media (max-width: 700px) {
+        body {
+          padding: 1.25rem;
+        }
+
+        header,
+        footer {
+          letter-spacing: 0.12em;
+        }
+
+        main {
+          padding: 1.5rem 0 1.25rem;
+        }
+
+        h1 {
+          font-size: clamp(3rem, 16vw, 4.5rem);
+          line-height: 1.08;
+        }
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        main {
+          animation: rise 0.8s ease both;
+        }
+      }
+
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(0.6rem);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <span>Personal page</span>
+      <span>Research</span>
+    </header>
+    <main>
+      <h1>Volkan Özer</h1>
+      <p class="status">Coming soon</p>
+    </main>
+    <footer>
+      <span>volkanozer.github.io</span>
+    </footer>
+  </body>
+</html>
